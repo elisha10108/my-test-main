@@ -1,0 +1,130 @@
+$facebook : #3c5a99;
+$twitter: #1DA1F2;
+$linkedin: #007bb5;
+$mail: #a6a6a6;
+$google: #db4437;
+$whatsapp: #25d366;
+
+body{
+  direction: rtl;
+  text-align: right;
+}
+.share_button a{
+  font-size: 40px;
+  text-decoration: none;
+}
+#inline_buttons{
+  border: 1px solid #ccc;
+  border-width: 1px 0px;
+  padding: 0px 0px;
+  text-align: center;
+  display: inline-block;
+  
+  a{
+    display: inline-block;
+    margin: 0px 5px;
+    position: relative;
+    
+    &:before{
+      content: attr(aria-label);
+      position: absolute;
+      border: 1px solid;
+      border-color: inherit;
+      display: block;
+      background: #fff;
+      top: 10%;
+      white-space: nowrap;
+      left: 10%;
+      transform: translateX(-50%);
+      padding: 5px 15px;
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s, visibility 0s .25s;
+    }
+    &:hover{
+      
+      i{
+        transform: scale(1.2);
+      }
+      &:before{
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+      }
+    }
+    &.facebook{
+      color: $facebook;
+      border-color: $facebook;
+    }
+    &.twitter{
+      color: $twitter;
+      border-color: $twitter;
+    }
+    &.linkedin{
+      color: $linkedin;
+      border-color: $linkedin;
+    }
+    &.mail{
+      color: $mail;
+      border-color: $mail;
+    }
+    &.google{
+      color: $google;
+      border-color: $google;
+    }
+    &.whatsapp{
+      color: $whatsapp;
+      border-color: $whatsapp;
+    }
+    i{
+      transition: all .2s;
+    }
+  }
+}
+#fixed_buttons{
+  position: fixed;
+  right: 0;
+  top: 10px;
+  
+  a{
+    display: block;
+    height: 5px;
+    width: 5px;
+    text-align: center;
+    line-height: 5px;
+    color: #fff;
+    transition: all .3s;
+    box-sizing: content-box;
+    border-left-style: solid;
+    border-left-width: 0;
+    
+    &:hover{
+      border-left-width: 5px;
+    }    
+    &.facebook{
+      background: $facebook;
+      border-color: $facebook;
+    }
+    &.twitter{
+      background: $twitter;
+      border-color: $twitter;
+    }
+    &.linkedin{
+      background: $linkedin;
+      border-color: $linkedin;
+    }
+    &.mail{
+      background: $mail;
+      border-color: $mail;
+    }
+    &.google{
+      background: $google;
+      border-color: $google;
+    }
+    &.whatsapp{
+      background: $whatsapp;
+      border-color: $whatsapp;
+    }
+  }
+}
